@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hNr-SF-nes">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hNr-SF-nes">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,26 +17,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="250" id="6xS-Jo-FHs">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="250" id="6xS-Jo-FHs" customClass="ImageCell" customModule="Universal_Reference" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6xS-Jo-FHs" id="Xsa-kQ-Cel">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="249.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="winter" translatesAutoresizingMaskIntoConstraints="NO" id="2bQ-zM-rj1">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XmR-EV-Qe2">
                                             <rect key="frame" x="20" y="11" width="374" height="228"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="2bQ-zM-rj1" secondAttribute="bottom" id="US5-I6-ctC"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="2bQ-zM-rj1" secondAttribute="trailing" id="hRS-fp-vPd"/>
-                                        <constraint firstItem="2bQ-zM-rj1" firstAttribute="leading" secondItem="Xsa-kQ-Cel" secondAttribute="leadingMargin" id="u8g-EF-yuo"/>
-                                        <constraint firstItem="2bQ-zM-rj1" firstAttribute="top" secondItem="Xsa-kQ-Cel" secondAttribute="topMargin" id="y0C-QD-LYR"/>
-                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="CustomImageView" destination="XmR-EV-Qe2" id="1R2-fB-K1Z"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ListCell" id="mp4-Vj-vbO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ListCell" id="mp4-Vj-vbO" customClass="ListCell" customModule="Universal_Reference" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="278" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mp4-Vj-vbO" id="RhF-nn-yEM">
@@ -57,8 +55,11 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="Iqp-wo-uag" secondAttribute="trailing" id="jA8-Jb-8DT"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="Iqp-wo-uag" id="x7F-Z6-KPE"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextCell" id="KRG-iI-TPJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextCell" id="KRG-iI-TPJ" customClass="TextCell" customModule="Universal_Reference" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="322" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KRG-iI-TPJ" id="xjz-h2-eZN">
@@ -79,6 +80,9 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="vqQ-In-gKc" secondAttribute="bottom" id="vTX-Oh-85q"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="customTextLabel" destination="vqQ-In-gKc" id="RCL-nq-32d"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -90,7 +94,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfF-VV-G3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583" y="120"/>
+            <point key="canvasLocation" x="582.60869565217399" y="119.86607142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c29-dx-lFc">
@@ -109,7 +113,4 @@
             <point key="canvasLocation" x="-335" y="120"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="winter" width="800" height="533"/>
-    </resources>
 </document>
